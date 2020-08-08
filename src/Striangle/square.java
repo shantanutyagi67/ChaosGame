@@ -117,11 +117,11 @@ public class square extends JComponent implements Runnable{
 
 	        rh.put(RenderingHints.KEY_RENDERING,
 	               RenderingHints.VALUE_RENDER_QUALITY);
-
+	        g2D.translate(100, 100);
 	        g2D.setRenderingHints(rh);
 	        g2D.setColor(Color.RED);
 	        g2D.setFont(new Font("TimesRoman", Font.PLAIN, 20));
-	        g2D.drawString("Iterator: "+n, 700, 50);
+	        g2D.drawString("Iterator: "+n, 600, -50);
 			n++;
 			g2D.setColor(Color.WHITE);
 			g2D.drawLine((int)sqr.getAx(), (int)sqr.getAy(), (int)sqr.getBx(), (int)sqr.getBy());
@@ -177,9 +177,9 @@ public class square extends JComponent implements Runnable{
 //				x=frame.getWidth()/2;
 //				y=frame.getHeight()/2;
 //			}
-//			Toolkit t=Toolkit.getDefaultToolkit();  
-//	        Image im=t.getImage("C:\\Users\\geekSA67\\Downloads\\tri.png");
-//	        g2D.drawImage(im, 0,0,this);
+			Toolkit t=Toolkit.getDefaultToolkit();  
+	        Image im=t.getImage("sqr.png");
+	        g2D.drawImage(im, -90,-90,this);
 			if(n==itr+1) return;
 			repaint();
 	}

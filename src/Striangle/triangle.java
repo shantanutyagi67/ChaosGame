@@ -144,8 +144,8 @@ public class triangle extends JComponent implements Runnable{
 				y=(y+tri.getCy())/2;
 			}
 			Toolkit t=Toolkit.getDefaultToolkit();  
-	        Image im=t.getImage("C:\\Users\\geekSA67\\Downloads\\tri.png");
-	        g2D.drawImage(im, 0,0,this);
+	        Image im=t.getImage("tri.png");
+	        g2D.drawImage(im, 10,10,this);
 			if(n==itr+1) return;
 			repaint();
 	}
